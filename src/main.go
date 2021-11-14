@@ -3,6 +3,9 @@ package main
 import "fmt"
 
 func main(){
+
+	fmt.Println("Hello World")
+
 	// consts
 	const pi float64 = 3.14
 	const text string = "PI number:"
@@ -15,20 +18,4 @@ func main(){
 	var result int
 
 	fmt.Println(number1, number2, result)
-
-	//Sum
-	result = number1 + number2
-	fmt.Println("Sum:", result)
-
-	//rest
-	result = number1 - number2
-	fmt.Println("Rest:", result)
-
-	//multi
-	result = number1 * number2
-	fmt.Println("Multi:", result)
-
-	//div
-	result = number1 / number2
-	fmt.Println("div:", result)
 }
