@@ -1,19 +1,34 @@
 package main
-import "fmt"
-import "math"
+
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
-	b := 10
-	h := 20
+	base := 10
+	height := 20
 
-	rectangle := b * h
+	rectangle := rectangleAreaCalculate(base, height)
 	fmt.Println("Rectangle area", rectangle)
-	
-	B := 7
-	trapeze := (h * ( B * h ))/2
+
+	base2 := 7
+	trapeze := trapezeAreaCalculate(base, base2, height)
 	fmt.Println("Trapeze area:", trapeze)
 
-	var r float64 = 50
-	cicle := math.Pi * math.Pow(r, 2)
-	fmt.Print("Cicle area:", math.Round(cicle))
+	var radius float64 = 50
+	cicle := cicleRadiusCalculate(radius)
+	fmt.Print("Cicle area: ", math.Round(cicle))
+}
+
+func rectangleAreaCalculate(base int, height int) int {
+	return base * height
+}
+
+func trapezeAreaCalculate(base, base2, height int) int {
+	return height * (base + base2) / 2
+}
+
+func cicleRadiusCalculate(radius float64) float64 {
+	return math.Pi * math.Pow(radius, 2)
 }
